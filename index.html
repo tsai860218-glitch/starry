@@ -484,9 +484,10 @@ footer{
   .hero-h1{letter-spacing:4px;}
   .hero-sub{letter-spacing:2px;font-size:14px;}
 
-  .eight-chars{justify-content:center;width:100%;overflow:visible;flex-wrap:nowrap;}
-  .char{font-size:clamp(14px,4.5vw,22px);padding:10px clamp(6px,2vw,12px);letter-spacing:0;}
-  .char-dot{font-size:clamp(10px,3vw,16px);padding:0 clamp(2px,1vw,6px);}
+  .eight-chars{justify-content:center;width:100%;overflow:visible;flex-wrap:wrap;gap:0;}
+  .char{font-size:clamp(20px,6.5vw,32px);padding:10px 12px;letter-spacing:0;}
+  .char-dot{font-size:clamp(12px,4vw,18px);padding:0 4px;}
+  .char-break{display:block;width:100%;height:8px;}
 
   .manifesto-box{padding:36px 20px;}
   .mf-text{font-size:15px;line-height:1.9;}
@@ -496,9 +497,10 @@ footer{
   .slogan-row{gap:12px;}
   .sl-txt{font-size:17px;}
 
-  .ef-chars{justify-content:center;flex-wrap:nowrap;overflow:visible;}
-  .ef-char{font-size:clamp(22px,6.5vw,40px);padding:10px 8px;}
-  .ef-dot{padding:0 5px;font-size:14px;}
+  .ef-chars{justify-content:center;flex-wrap:wrap;overflow:visible;gap:0;}
+  .ef-char{font-size:clamp(28px,8vw,48px);padding:12px 10px;}
+  .ef-dot{padding:0 6px;font-size:16px;}
+  .ef-break{display:block;width:100%;height:0;}
   .ef-descs{grid-template-columns:repeat(2,1fr);}
 
   footer{padding:24px 16px;flex-direction:column;align-items:center;text-align:center;gap:8px;}
@@ -533,21 +535,13 @@ footer{
   <h1 class="hero-h1">繁星<br>商學院</h1>
   <div class="hero-sub">每一顆星，都有它閃耀的理由</div>
   <div class="eight-chars">
-    <div class="char-group">
-      <div class="char">尊</div><div class="char">重</div>
-    </div>
+    <div class="char-group"><div class="char">尊</div><div class="char">重</div></div>
     <div class="char-dot">・</div>
-    <div class="char-group">
-      <div class="char">友</div><div class="char">愛</div>
-    </div>
+    <div class="char-group"><div class="char">友</div><div class="char">愛</div></div>
+    <div class="char-break"></div>
+    <div class="char-group"><div class="char">共</div><div class="char">好</div></div>
     <div class="char-dot">・</div>
-    <div class="char-group">
-      <div class="char">共</div><div class="char">好</div>
-    </div>
-    <div class="char-dot">・</div>
-    <div class="char-group">
-      <div class="char">同</div><div class="char">行</div>
-    </div>
+    <div class="char-group"><div class="char">同</div><div class="char">行</div></div>
   </div>
   <div class="hero-cta">
     <button class="btn-primary" onclick="document.getElementById('manifesto').scrollIntoView({behavior:'smooth'})">認識繁星精神 ✦</button>
@@ -653,13 +647,13 @@ footer{
   <div class="eight-feature">
     <div class="ef-tag">✦ 繁星八字心法 ✦</div>
     <div class="ef-chars">
-      <div class="ef-char">尊</div><div class="ef-char">重</div>
+      <div class="ef-word"><div class="ef-char">尊</div><div class="ef-char">重</div></div>
       <div class="ef-dot">・</div>
-      <div class="ef-char">友</div><div class="ef-char">愛</div>
+      <div class="ef-word"><div class="ef-char">友</div><div class="ef-char">愛</div></div>
+      <div class="ef-break"></div>
+      <div class="ef-word"><div class="ef-char">共</div><div class="ef-char">好</div></div>
       <div class="ef-dot">・</div>
-      <div class="ef-char">共</div><div class="ef-char">好</div>
-      <div class="ef-dot">・</div>
-      <div class="ef-char">同</div><div class="ef-char">行</div>
+      <div class="ef-word"><div class="ef-char">同</div><div class="ef-char">行</div></div>
     </div>
     <div class="ef-descs">
       <div class="ef-desc-item">
