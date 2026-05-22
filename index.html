@@ -119,20 +119,22 @@ nav.shrink{padding:14px 48px;}
 
 /* 8字核心 */
 .eight-chars{
-  display:flex;align-items:center;gap:0;
+  display:flex;align-items:center;justify-content:center;gap:0;
+  flex-wrap:nowrap;
+  width:100%;
   margin-bottom:56px;
   opacity:0;animation:fadeUp .8s .8s ease forwards;
 }
 .char-group{
-  display:flex;gap:0;
+  display:flex;gap:0;flex-shrink:0;
 }
 .char{
   font-family:'Noto Serif TC',serif;
-  font-size:clamp(22px,3.5vw,36px);
+  font-size:clamp(18px,5.5vw,36px);
   font-weight:900;
   color:var(--tp);
   letter-spacing:2px;
-  padding:14px 16px;
+  padding:clamp(8px,2vw,14px) clamp(10px,2.5vw,16px);
   border:1px solid rgba(201,168,76,.2);
   background:rgba(201,168,76,.05);
   transition:all .25s;
@@ -144,10 +146,10 @@ nav.shrink{padding:14px 48px;}
   border-color:var(--gold-dim);
 }
 .char-dot{
-  font-size:24px;color:var(--gold);
-  padding:0 10px;
+  font-size:clamp(14px,3vw,24px);color:var(--gold);
+  padding:0 clamp(4px,1.5vw,10px);
   display:flex;align-items:center;
-  opacity:.6;
+  opacity:.6;flex-shrink:0;
 }
 .hero-cta{
   display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
@@ -466,15 +468,47 @@ footer{
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
-  nav{padding:16px 24px;}
-  nav.shrink{padding:12px 24px;}
-  .nav-links{gap:18px;}
+  nav{padding:16px 20px;}
+  nav.shrink{padding:12px 20px;}
+  .nav-links{gap:14px;}
+  .nav-links a{font-size:12px;letter-spacing:.5px;}
   .nav-cta{display:none;}
-  #hero,#manifesto,#core,#slogans,#eight,#join{padding-left:24px;padding-right:24px;}
-  .manifesto-box{padding:40px 28px;}
-  .ef-chars{gap:0;}
-  .ef-char{padding:14px 16px;}
-  footer{padding:24px;}
+
+  #hero{padding:100px 16px 80px;align-items:center;}
+  #manifesto,#core,#slogans,#eight,#join{padding-left:16px;padding-right:16px;}
+
+  .hero-h1{letter-spacing:6px;}
+  .hero-sub{letter-spacing:3px;}
+
+  /* 8字置中關鍵修復 */
+  .eight-chars{
+    justify-content:center;
+    width:100%;
+    overflow:hidden;
+  }
+
+  .manifesto-box{padding:36px 24px;}
+  .mf-text{font-size:16px;}
+
+  .core-grid{grid-template-columns:1fr;}
+
+  .slogan-row{gap:14px;}
+  .sl-txt{font-size:18px;}
+
+  .ef-chars{justify-content:center;flex-wrap:nowrap;overflow:hidden;}
+  .ef-char{
+    font-size:clamp(24px,7vw,44px);
+    padding:12px 10px;
+  }
+  .ef-dot{padding:0 6px;font-size:16px;}
+  .ef-descs{grid-template-columns:repeat(2,1fr);}
+
+  footer{
+    padding:24px 16px;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;gap:8px;
+  }
 }
 </style>
 </head>
