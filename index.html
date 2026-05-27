@@ -466,6 +466,120 @@ footer{
   margin-left:8px;
 }
 
+
+/* ── GUIDANCE ── */
+#guidance{
+  position:relative;z-index:1;
+  padding:40px 48px 100px;
+  max-width:1100px;margin:0 auto;
+}
+.guidance-header{text-align:center;margin-bottom:64px;}
+.guidance-header .sec-tag{margin-bottom:16px;}
+.guidance-header h2{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(26px,3.5vw,42px);font-weight:900;
+  letter-spacing:3px;line-height:1.4;
+}
+.guidance-header h2 em{font-style:normal;color:var(--gold-light);}
+.guidance-header p{
+  font-size:15px;color:var(--tm);
+  max-width:520px;margin:20px auto 0;
+  line-height:2;
+}
+.guidance-layers{
+  display:flex;flex-direction:column;gap:0;
+}
+.guidance-layer{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:0 32px;
+  padding:48px 0;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  position:relative;
+}
+.guidance-layer:last-child{border-bottom:none;}
+.gl-left{
+  display:flex;flex-direction:column;
+  align-items:center;gap:12px;
+  padding-top:4px;
+}
+.gl-num{
+  font-family:'Noto Serif TC',serif;
+  font-size:11px;letter-spacing:3px;
+  color:var(--gold-dim);
+}
+.gl-icon-wrap{
+  width:56px;height:56px;
+  border-radius:50%;
+  border:1px solid rgba(201,168,76,.25);
+  background:rgba(201,168,76,.06);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;
+  position:relative;
+  flex-shrink:0;
+}
+.gl-icon-wrap::after{
+  content:'';
+  position:absolute;
+  bottom:-48px;left:50%;transform:translateX(-50%);
+  width:1px;height:40px;
+  background:linear-gradient(to bottom,rgba(201,168,76,.3),transparent);
+}
+.guidance-layer:last-child .gl-icon-wrap::after{display:none;}
+.gl-right{}
+.gl-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(20px,2.5vw,28px);font-weight:900;
+  color:var(--gold-light);
+  letter-spacing:2px;margin-bottom:16px;
+}
+.gl-body{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(15px,1.8vw,18px);
+  color:var(--tp);
+  line-height:2.1;
+  margin-bottom:16px;
+}
+.gl-quote{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(14px,1.6vw,16px);
+  color:var(--gold);
+  opacity:.85;
+  letter-spacing:.5px;
+  padding-left:16px;
+  border-left:2px solid rgba(201,168,76,.4);
+  line-height:1.9;
+}
+
+/* final manifesto line */
+.guidance-finale{
+  margin-top:64px;
+  background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(100,80,200,.08));
+  border:1px solid rgba(201,168,76,.2);
+  border-radius:20px;
+  padding:40px 36px;
+  text-align:center;
+}
+.gf-text{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(16px,2.2vw,22px);
+  color:var(--tp);line-height:2.1;
+  letter-spacing:1px;margin-bottom:0;
+}
+.gf-text strong{color:var(--gold-light);font-weight:900;}
+
+@media(max-width:768px){
+  #guidance{padding-left:20px;padding-right:20px;padding-bottom:60px;}
+  .guidance-layer{
+    grid-template-columns:52px 1fr;
+    gap:0 16px;
+    padding:36px 0;
+  }
+  .gl-icon-wrap{width:44px;height:44px;font-size:20px;}
+  .gl-icon-wrap::after{bottom:-36px;height:28px;}
+  .guidance-finale{padding:28px 20px;}
+}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
 
@@ -522,6 +636,7 @@ footer{
   <a class="nav-logo" href="#hero"><span class="star">✦</span>繁星商學院</a>
   <ul class="nav-links">
     <li><a href="#manifesto">宣言</a></li>
+    <li><a href="#guidance">指引</a></li>
     <li><a href="#core">核心理念</a></li>
     <li><a href="#eight">我們的話</a></li>
     <li><a href="#join">加入繁星</a></li>
@@ -566,6 +681,96 @@ footer{
       <span class="hl">這，就是繁星的方式。</span>
     </div>
     <div class="mf-sign">—— 繁星商學院 全體成員</div>
+  </div>
+</section>
+
+
+<!-- GUIDANCE -->
+<section id="guidance">
+  <div class="guidance-header">
+    <div class="sec-tag">何謂繁星</div>
+    <h2>我們每個人，<br>都是一顆<em>有方向的星</em></h2>
+    <p>繁星不只是一個名字，它是一種信念——關於光、關於指引、關於在黑暗中不放棄彼此。</p>
+  </div>
+
+  <div class="guidance-layers">
+
+    <!-- 層次一 -->
+    <div class="guidance-layer">
+      <div class="gl-left">
+        <span class="gl-num">01</span>
+        <div class="gl-icon-wrap">⭐</div>
+      </div>
+      <div class="gl-right">
+        <div class="gl-title">星星，是指引</div>
+        <div class="gl-body">
+          星星自帶光芒，自有方位。<br>
+          在古代與現代，它都是最重要的導航工具。<br>
+          尤其是在最黑暗的夜裡——<br>
+          當你迷路，當所有工具都派不上用場，<br>
+          一顆星，就能帶你走出黑暗。
+        </div>
+        <div class="gl-quote">
+          你，也是某個人生命中的那顆星。<br>
+          你的存在，就是一種指引。
+        </div>
+      </div>
+    </div>
+
+    <!-- 層次二 -->
+    <div class="guidance-layer">
+      <div class="gl-left">
+        <span class="gl-num">02</span>
+        <div class="gl-icon-wrap">🔥</div>
+      </div>
+      <div class="gl-right">
+        <div class="gl-title">星火，可以燎原</div>
+        <div class="gl-body">
+          不要小看自己微小的光。<br>
+          星星之火，可以燎原。<br>
+          每一個真誠的付出、每一次勇敢的行動，<br>
+          都有改變身邊世界的力量。<br>
+          我們不看輕任何一個人的力量。
+        </div>
+        <div class="gl-quote">
+          你以為只是一點光，<br>
+          卻可能是別人黑暗中唯一的亮。
+        </div>
+      </div>
+    </div>
+
+    <!-- 層次三 -->
+    <div class="guidance-layer">
+      <div class="gl-left">
+        <span class="gl-num">03</span>
+        <div class="gl-icon-wrap">✨</div>
+      </div>
+      <div class="gl-right">
+        <div class="gl-title">繁星，照亮世界</div>
+        <div class="gl-body">
+          當我們每個人朝著同一個方向發光，<br>
+          我們就不再只是一顆星——<br>
+          我們是繁星。<br>
+          照亮天空，指引方向，<br>
+          帶動身邊的人，一起成為光的一部分。
+        </div>
+        <div class="gl-quote">
+          一個人走得快，一群人走得遠。<br>
+          繁星同行，沒有人被落下。
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="guidance-finale">
+    <div class="gf-text">
+      每個人都是一顆星，自帶光芒，自有方向。<br>
+      當我們不看輕自己、不熄滅彼此，<br>
+      星星之火，終將燎原。<br><br>
+      這就是繁星——<br>
+      <strong>不只照亮自己，更指引世界。</strong>
+    </div>
   </div>
 </section>
 
