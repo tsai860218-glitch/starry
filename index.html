@@ -215,9 +215,10 @@ nav.shrink{padding:14px 48px;}
   line-height:1;pointer-events:none;
 }
 .mf-tag{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:11px;letter-spacing:4px;color:var(--gold);
-  text-transform:uppercase;margin-bottom:36px;
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:'Noto Serif TC',serif;
+  font-size:22px;font-weight:900;letter-spacing:6px;color:var(--gold-light);
+  margin-bottom:40px;
 }
 .mf-text{
   font-family:'Noto Serif TC',serif;
@@ -254,8 +255,11 @@ nav.shrink{padding:14px 48px;}
 .sec-h2 em{font-style:normal;color:var(--gold-light);}
 .core-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+@media(max-width:900px){
+  .core-grid{grid-template-columns:repeat(2,1fr);}
 }
 .core-card{
   background:var(--pc);
@@ -848,6 +852,11 @@ footer{
     <div class="slogan-row">
       <span class="sl-num">07</span>
       <div class="sl-txt">共好不是競爭，<em>是一起走得更遠。</em></div>
+      <span class="sl-icon">✦</span>
+    </div>
+    <div class="slogan-row">
+      <span class="sl-num">08</span>
+      <div class="sl-txt">成為彼此的星，<em>在黑暗中帶路，指引方向。</em></div>
       <span class="sl-icon">✦</span>
     </div>
   </div>
