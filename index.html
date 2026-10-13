@@ -4,23 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>繁星商學院</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 :root{
-  --gold:#C9A84C;
-  --gold-light:#F0D080;
-  --gold-dim:#7A6230;
-  --gold-pale:#3D3020;
-  --pd:#0D0B1F;
-  --pm:#1A1535;
-  --pc:#221E3A;
-  --pb:#3A3460;
-  --pb2:#2A2550;
-  --tp:#F5EFD6;
-  --tm:#9B93C0;
-  --td:#5C5580;
+  /* 品牌色彩 / Brand Colors */
+  --gold:#D4AF7C;        /* 星耀金 #D4AF7C */
+  --gold-light:#E8C98A;  /* 星耀金亮版 */
+  --gold-dim:#8A6A3A;    /* 星耀金暗版 */
+  --gold-pale:#3D2E15;   /* 星耀金極暗 */
+  --navy:#0B2545;        /* 星空藍 #0B2545 */
+  --pd:#071830;          /* 深底色（比星空藍更深）*/
+  --pm:#0B2545;          /* 星空藍 */
+  --pc:#0F2F55;          /* 卡片背景 */
+  --pb:#1A4070;          /* 邊框色 */
+  --pb2:#163660;         /* 邊框色2 */
+  --cream:#F5E9D7;       /* 星輝米 #F5E9D7 */
+  --tp:#F5E9D7;          /* 主文字：星輝米 */
+  --tm:#A8C0D8;          /* 次要文字 */
+  --td:#6B8FAA;          /* 淡文字 */
+  --gray:#6B7280;        /* 質感灰 #6B7280 */
 }
 
 html{scroll-behavior:smooth;}
@@ -47,8 +51,8 @@ nav{
   padding:20px 48px;
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
-  background:rgba(13,11,31,.72);
-  border-bottom:1px solid rgba(201,168,76,.12);
+  background:rgba(7,24,48,.85);
+  border-bottom:1px solid rgba(212,175,124,.15);
   transition:padding .3s;
 }
 nav.shrink{padding:14px 48px;}
@@ -91,7 +95,8 @@ nav.shrink{padding:14px 48px;}
   padding:120px 40px 80px;
 }
 .hero-eyebrow{
-  font-size:13px;letter-spacing:6px;
+  font-family:'Montserrat',sans-serif;
+  font-size:12px;letter-spacing:8px;
   color:var(--gold);text-transform:uppercase;
   margin-bottom:36px;
   display:flex;align-items:center;gap:16px;
@@ -113,7 +118,7 @@ nav.shrink{padding:14px 48px;}
   font-family:'Noto Serif TC',serif;
   font-size:clamp(16px,2.4vw,22px);
   color:var(--tm);letter-spacing:5px;
-  margin-bottom:52px;
+  margin-bottom:12px;
   opacity:0;animation:fadeUp .8s .6s ease forwards;
 }
 
@@ -155,6 +160,15 @@ nav.shrink{padding:14px 48px;}
   display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
   opacity:0;animation:fadeUp .8s 1s ease forwards;
 }
+.hero-keywords{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:36px;
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;font-weight:600;
+  letter-spacing:4px;color:var(--td);
+  text-transform:uppercase;flex-wrap:wrap;justify-content:center;
+}
+.kw-dot{color:var(--gold);opacity:.5;font-size:14px;}
 .btn-primary{
   padding:14px 38px;
   background:linear-gradient(135deg,var(--gold),var(--gold-light));
@@ -175,6 +189,16 @@ nav.shrink{padding:14px 48px;}
 }
 .btn-secondary:hover{border-color:var(--gold-light);color:#fff;}
 
+.hero-tagline-en{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(9px,1.2vw,12px);
+  font-weight:400;
+  letter-spacing:3px;
+  color:var(--td);
+  text-transform:uppercase;
+  margin-bottom:44px;
+  text-align:center;
+}
 .scroll-indicator{
   position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:8px;
@@ -203,7 +227,7 @@ nav.shrink{padding:14px 48px;}
 }
 .manifesto-box::before{
   content:'';position:absolute;inset:0;border-radius:32px;
-  background:linear-gradient(135deg,rgba(201,168,76,.16),transparent 55%,rgba(90,70,200,.14));
+  background:linear-gradient(135deg,rgba(212,175,124,.18),transparent 55%,rgba(11,37,69,.4));
   pointer-events:none;
 }
 .manifesto-box::after{
@@ -347,13 +371,13 @@ nav.shrink{padding:14px 48px;}
 .eight-feature::before{
   content:'';position:absolute;
   width:600px;height:600px;
-  background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(212,175,124,.08) 0%,transparent 70%);
   top:-200px;right:-200px;pointer-events:none;
 }
 .eight-feature::after{
   content:'';position:absolute;
   width:500px;height:500px;
-  background:radial-gradient(circle,rgba(100,80,200,.07) 0%,transparent 70%);
+  background:radial-gradient(circle,rgba(11,37,69,.6) 0%,transparent 70%);
   bottom:-150px;left:-150px;pointer-events:none;
 }
 .ef-tag{
@@ -431,6 +455,21 @@ nav.shrink{padding:14px 48px;}
   max-width:480px;margin:0 auto 44px;
   line-height:2.1;
 }
+
+/* ── JOIN PILLARS ── */
+.join-pillars{
+  display:flex;justify-content:center;gap:32px;flex-wrap:wrap;
+  margin-top:8px;
+}
+.jp-item{text-align:center;}
+.jp-icon{font-size:24px;display:block;margin-bottom:8px;}
+.jp-name{
+  font-family:'Montserrat',sans-serif;
+  font-size:11px;font-weight:700;
+  letter-spacing:3px;color:var(--gold);
+  margin-bottom:4px;
+}
+.jp-desc{font-size:13px;color:var(--td);}
 
 /* ── FOOTER ── */
 footer{
@@ -637,7 +676,14 @@ footer{
 
 <!-- NAV -->
 <nav id="main-nav">
-  <a class="nav-logo" href="#hero"><span class="star">✦</span>繁星商學院</a>
+  <a class="nav-logo" href="#hero">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2 L15.8 10.2 L24 12 L15.8 13.8 L14 22 L12.2 13.8 L4 12 L12.2 10.2 Z" fill="#D4AF7C"/>
+      <ellipse cx="14" cy="14" rx="12" ry="4" stroke="#D4AF7C" stroke-width="1.2" fill="none" transform="rotate(-20 14 14)"/>
+      <circle cx="20" cy="5" r="1.5" fill="#E8C98A" opacity="0.8"/>
+    </svg>
+    繁星商學院
+  </a>
   <ul class="nav-links">
     <li><a href="#manifesto">宣言</a></li>
     <li><a href="#guidance">指引</a></li>
@@ -653,6 +699,7 @@ footer{
   <div class="hero-eyebrow">Stellar Business Academy</div>
   <h1 class="hero-h1">繁星<br>商學院</h1>
   <div class="hero-sub">每一顆星，都有它閃耀的理由</div>
+  <div class="hero-tagline-en">IGNITE POTENTIAL · CONNECT PEOPLE · CREATE A GREATER TOMORROW</div>
   <div class="eight-chars">
     <div class="char-group"><div class="char">尊</div><div class="char">重</div></div>
     <div class="char-dot">・</div>
@@ -661,6 +708,12 @@ footer{
     <div class="char-group"><div class="char">共</div><div class="char">好</div></div>
     <div class="char-dot">・</div>
     <div class="char-group"><div class="char">指</div><div class="char">引</div></div>
+  </div>
+  <div class="hero-keywords">
+    <span>STARS</span><span class="kw-dot">·</span>
+    <span>SUCCESS</span><span class="kw-dot">·</span>
+    <span>GROWTH</span><span class="kw-dot">·</span>
+    <span>TOGETHER</span>
   </div>
   <div class="hero-cta">
     <button class="btn-primary" onclick="document.getElementById('manifesto').scrollIntoView({behavior:'smooth'})">認識繁星精神 ✦</button>
@@ -907,16 +960,28 @@ footer{
     我們只尋找願意相信、願意成長、<br>
     願意與人同行的靈魂。
   </p>
-  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+  <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;">
     <button class="btn-primary" style="font-size:15px;padding:16px 44px;">開始我的繁星之旅 ✦</button>
+  </div>
+  <div class="join-pillars">
+    <div class="jp-item"><span class="jp-icon">👥</span><div class="jp-name">PEOPLE</div><div class="jp-desc">以人為本</div></div>
+    <div class="jp-item"><span class="jp-icon">📚</span><div class="jp-name">LEARNING</div><div class="jp-desc">持續學習</div></div>
+    <div class="jp-item"><span class="jp-icon">🌟</span><div class="jp-name">OPPORTUNITY</div><div class="jp-desc">把握機遇</div></div>
+    <div class="jp-item"><span class="jp-icon">💫</span><div class="jp-name">IMPACT</div><div class="jp-desc">創造影響</div></div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">✦ 繁星商學院</div>
+  <div class="footer-logo">
+    <svg width="18" height="18" viewBox="0 0 28 28" fill="none" style="vertical-align:middle;margin-right:8px;">
+      <path d="M14 2 L15.8 10.2 L24 12 L15.8 13.8 L14 22 L12.2 13.8 L4 12 L12.2 10.2 Z" fill="#D4AF7C"/>
+      <ellipse cx="14" cy="14" rx="12" ry="4" stroke="#D4AF7C" stroke-width="1.2" fill="none" transform="rotate(-20 14 14)"/>
+    </svg>
+    繁星商學院
+  </div>
   <div class="footer-tagline">尊重・友愛・共好・指引</div>
-  <div class="footer-copy">每一顆星都有它閃耀的時刻</div>
+  <div class="footer-copy">點亮潛能・連結夥伴・共創更大的可能</div>
 </footer>
 
 <script>
@@ -940,7 +1005,7 @@ function initStars() {
       r: Math.random() * 1.5 + 0.2,
       speed: Math.random() * 0.006 + 0.001,
       phase: Math.random() * Math.PI * 2,
-      color: Math.random() > 0.7 ? [240,208,128] : [220,210,255]
+      color: Math.random() > 0.6 ? [212,175,124] : Math.random() > 0.5 ? [245,233,215] : [180,210,240]
     });
   }
 }
